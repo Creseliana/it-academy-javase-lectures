@@ -36,5 +36,18 @@ public class OneDimensionArray {
         monthDays = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         int[] monthDaysInitialized = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+        System.out.println("Using for loop");
+
+        for (int i = 0; i < monthDays.length; i++) {
+            System.out.println("Month number " + (i + 1) + " is " + monthDays[i] + " days long");
+        }
+
+        System.out.println();
+        System.out.println("Using foreach loop:");
+
+        for (int monthDay : monthDays) {
+            System.out.println("This month is " + monthDay + " days long");
+        }
     }
 }
