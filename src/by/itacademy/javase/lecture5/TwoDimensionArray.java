@@ -27,8 +27,43 @@ public class TwoDimensionArray {
             {3, 3, 3}
         }; // такая инициализация возможна только при объявлении
 
-        for (int i = 0; i < twoDimArray3.length; i++) {
+        System.out.println("\nMatrix");
+        for (int i = 0; i < twoDimArray4.length; i++) {
+            for (int j = 0; j < twoDimArray4[i].length; j++) {
+                System.out.print(twoDimArray4[i][j] + " ");
+            }
+            System.out.println();
+        }
 
+        System.out.println("\nArray with inner arrays of different sizes");
+        for (int i = 0; i < twoDimArray3.length; i++) {
+            for (int j = 0; j < twoDimArray3[i].length; j++) {
+                System.out.print(twoDimArray3[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        // пример для презентации
+        int[][] array = new int[][]{ // [3][3]
+            {1, 1, 1},
+            {2, 2, 2},
+            {3, 3, 3}
+        };
+
+        System.out.println();
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        for (int[] numbers : array) {
+            for (int number : numbers) {
+                System.out.print(number + " ");
+            }
+            System.out.println();
         }
     }
 }
