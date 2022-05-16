@@ -14,6 +14,11 @@ public class Scope {
 //        nonStaticNumber = 2; // not visible here
     }
 
+    static {
+        staticNumber = 3;
+//        nonStaticNumber = 3; // not visible here
+    }
+
     void nonStaticMethod() {
         staticNumber = 1;
         nonStaticNumber = 1;
