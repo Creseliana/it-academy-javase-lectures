@@ -26,6 +26,11 @@ public class StringPoolDemo {
         String line6 = "String";
         String line7 = "Some" + line6;
         System.out.println("line5 == line7 is " + (line5 == line7)); // false
+        // Значение line16 тоже будет получено во время выполнения и помещено в кучу,
+        // а значение line15 из пула строк и их ссылки не будут равны
+        String line15 = "2";
+        String line16 = String.valueOf(2);
+        System.out.println("line15 == line16 is " + (line15 == line16)); // false
 
         // line8 значение в пуле строк, а line9 и line10 создаются новые объекты и помещаются
         // в кучу, поэтому все три переменные содержат ссылки на разные области памяти
@@ -35,7 +40,7 @@ public class StringPoolDemo {
         System.out.println("line8 == line9 is " + (line8 == line9)); // false
         System.out.println("line9 == line10 is " + (line9 == line10)); // false
 
-        // объекты строки, которые храняться в куче могут быть интернированы
+        // объекты строки, которые хранятся в куче, могут быть интернированы
         String line11 = "SomeString";
         String line12 = "String";
         String line13 = new String("SomeString");
@@ -48,5 +53,8 @@ public class StringPoolDemo {
         System.out.println("After intern:");
         System.out.println("line11 == line13 is " + (line11 == line13)); // true
         System.out.println("line13 == line14 is " + (line13 == line14)); // true
+
+        // Дополнительная информация по пулу строк
+        // https://topjava.ru/blog/rukovodstvo-po-string-pool-v-java
     }
 }
