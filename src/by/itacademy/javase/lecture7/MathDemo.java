@@ -24,18 +24,30 @@ public class MathDemo {
         System.out.println("Округление вниз " + a + " = " + floor);
 
         double n = 0.5;
-        double sin, cos, tan, asin, acos, atan;
-        sin = Math.sin(n);
-        cos = Math.cos(n);
-        tan = Math.tan(n);
-        asin = Math.asin(n);
-        acos = Math.acos(n);
-        atan = Math.atan(n);
-        System.out.println("sin " + n + " = " + sin);
-        System.out.println("cos " + n + " = " + cos);
-        System.out.println("tan " + n + " = " + tan);
-        System.out.println("asin " + n + " = " + asin);
-        System.out.println("acos " + n + " = " + acos);
-        System.out.println("atan " + n + " = " + atan);
+        System.out.println("sin " + n + " = " + Math.sin(n));
+        System.out.println("cos " + n + " = " + Math.cos(n));
+        System.out.println("tan " + n + " = " + Math.tan(n));
+        System.out.println("asin " + n + " = " + Math.asin(n));
+        System.out.println("acos " + n + " = " + Math.acos(n));
+        System.out.println("atan " + n + " = " + Math.atan(n));
+
+        double rad = 1;
+        double degree = 180;
+        double r1, r2;
+        r1 = Math.toDegrees(rad);
+        r2 = Math.toRadians(degree);
+
+        System.out.println(rad + " радиан = " + r1 + " градусов ");
+        System.out.println(degree + " градусов = " + r2 + " радиан ");
+
+        System.out.println("Минимальное число: " + Math.min(3, 6));
+        System.out.println("Максимальное число: " + Math.max(3, 6));
+
+        System.out.println("Модуль числа  " + 5 + " = " + Math.abs(5));
+        System.out.println("Модуль числа " + -5 + " = " + Math.abs(-5));
+
+        System.out.println("Число ПИ: " + Math.PI);
+
+        System.out.print("Гипотенуза = " + Math.hypot(3, 4));
     }
 }
