@@ -41,12 +41,12 @@ public class StringPoolDemo {
         String line13 = new String("SomeString");
         String line14 = "Some" + line12;
         System.out.println("Before intern:");
-        System.out.println("line11 == line13 is " + (line11 == line13));
-        System.out.println("line13 == line14 is " + (line13 == line14));
+        System.out.println("line11 == line13 is " + (line11 == line13)); // false
+        System.out.println("line13 == line14 is " + (line13 == line14)); // false
         line13 = line13.intern();
         line14 = line14.intern();
         System.out.println("After intern:");
-        System.out.println("line11 == line13 is " + (line11 == line13));
-        System.out.println("line13 == line14 is " + (line13 == line14));
+        System.out.println("line11 == line13 is " + (line11 == line13)); // true
+        System.out.println("line13 == line14 is " + (line13 == line14)); // true
     }
 }

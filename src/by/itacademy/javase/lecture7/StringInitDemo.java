@@ -1,6 +1,6 @@
 package by.itacademy.javase.lecture7;
 
-public class StringDemo {
+public class StringInitDemo {
 
     public static void main(String[] args) {
         char[] array = {'s', 'o', 'm', 'e', ' ', 's', 't', 'r', 'i', 'n', 'g'};
